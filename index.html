@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NotePad--</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to NotePad--</h1>
+    <h3>NotePad-- is a basic notetaking application to fufill your needs</h3>
+    <form id="activeNoteForm">
+      <textarea id="activeNote"></textarea>
+      <button type="submit" id="submitButton">submit</button>
+    </form>
+    <form id="activeCheckItemForm">
+      <textarea id="activeCheckItem"></textarea>
+      <button type="submit" id="checklistSubmitButton">submit as checklist item</button>
+    </form>
+  </header>
+  <main>
+    <section>
+      <h2>my notes:</h2>
+      <ul id="notelist">
+
+      </ul>
+    </section>
+    <section>
+      <h2>my checklist:</h2>
+      <ul id="checklist">
+        
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <small>Roshan Kareer © 2023,</small>
+    <small>Join open beta <a href=https://www.youtube.com/watch?v=dQw4w9WgXcQ>here</a></small>
+  </footer>
+  <script src="notescript.js"></script>
+  <script src="checklistscript.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

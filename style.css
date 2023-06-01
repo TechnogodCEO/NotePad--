@@ -10,36 +10,59 @@ body {
   font-family: IBM Plex Mono, monospace;
 }
 
-#submitButton {
+.button{
   display: block;
   height: 50px;
   width: 150px;
-  background-color: lime;
   border-radius: 20px;
-  margin: 25px 0;
+  margin: 1rem 0;
+  color: white;
+}
+
+.folderButton{
+  background-color: grey;
+}
+
+.button:hover{
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.folderNotes{
+  display: none;
+}
+
+#folderlist {
+  list-style: none;
+}
+
+#submitButton {
+  background-color: lime;
 }
 
 #checklistSubmitButton {
-  display: block;
-  height: 50px;
-  width: 150px;
   background-color: red;
-  border-radius: 20px;
-  margin: 25px 0;
+}
+
+#folderSubmitButton {
+  background-color: blue;
 }
 
 #submitButton:hover {
-  cursor: pointer;
   background-color: limegreen;
-  transition: background-color 0.5s;
 }
 
 #checklistSubmitButton:hover {
-  cursor: pointer;
   background-color: #ee6a68;
-  transition: background-color 0.5s;
 }
 
+#folderSubmitButton:hover {
+  background-color: #193dcc;
+}
+
+#selectFolder {
+  margin-bottom: 1rem;
+}
 footer {
   position: fixed;
   bottom: 0;

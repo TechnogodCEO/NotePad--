@@ -22,8 +22,11 @@ checkItemForm.onsubmit = (event) => {
   localLength = saveLocalCheckItems.length 
   
   note = createCheckItem(inputField.value, false, localLength);
-  saveLocalCheckItems.push({ note: note, checked: false });
-  localStorage['checklist'] = JSON.stringify(saveLocalCheckItems);
+  if (inputField.value.trim() !== "") {
+    saveLocalCheckItems.push({ note: note, checked: false });
+    localStorage['checklist'] =       
+    JSON.stringify(saveLocalCheckItems);
+  }
 }
 
 const createCheckItem = (text, checked, index) => {

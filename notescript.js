@@ -28,7 +28,13 @@ const createNote = (text) => {
     alert("please put some text in ur note");
     return false;
   }
-  // console.log("clicked");
+
+  // check the selected folder
+  let folderSelect = document.getElementById("selectFolder");
+  let selectedFolder = folderSelect.selectedOptions[0].value;
+  console.log(selectedFolder);
+
+  // 
   let note = document.createElement("li");
   note.innerHTML = text;
   console.log(note);
@@ -45,9 +51,11 @@ noteform.onsubmit = (event) => {
   let inputField = document.getElementById("activeNote");
   event.preventDefault(); // Stops page from reloading when submitting
   note = createNote(inputField.value);
-  saveLocalNotes = JSON.parse(localStorage['notes']);
-  saveLocalNotes.push(note.innerHTML);
-  localStorage['notes'] = JSON.stringify(saveLocalNotes);
+  if (inputField.value.trim() !== "") {
+    saveLocalNotes = JSON.parse(localStorage['notes']);
+    saveLocalNotes.push(note.innerHTML);
+    localStorage['notes'] = JSON.stringify(saveLocalNotes);
+  }
 }
 
 const noteScriptMain = () => {

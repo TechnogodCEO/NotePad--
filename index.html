@@ -14,11 +14,19 @@
     <h3>NotePad-- is a basic notetaking application to fufill your needs</h3>
     <form id="activeNoteForm">
       <textarea id="activeNote"></textarea>
-      <button type="submit" id="submitButton">submit</button>
+      <button type="submit" id="submitButton" class="button">submit</button>
+      <label for="selectFolder">select a folder:</label>
+      <select id="selectFolder">
+        <option value="my notes">my notes</option>
+      </select>
     </form>
     <form id="activeCheckItemForm">
       <textarea id="activeCheckItem"></textarea>
-      <button type="submit" id="checklistSubmitButton">submit as checklist item</button>
+      <button type="submit" id="checklistSubmitButton" class="button">submit as checklist item</button>
+    </form>
+    <form id="activeFolderForm">
+      <textarea id="activeFolder"></textarea>
+      <button type="submit" id="folderSubmitButton" class="button">create a folder</button>
     </form>
   </header>
   <main>
@@ -31,11 +39,19 @@
     <section>
       <h2>my checklist:</h2>
       <ul id="checklist">
-        
+
       </ul>
     </section>
     <section>
-      <h2>my folders</h2>
+      <h2>my folders:</h2>
+      <ul id="folderlist">
+        <li>
+          <button class="folderButton button">name of folder</button>
+           <ul class="folderNotes">
+            <li>example note</li>
+          </ul>
+        </li>
+      </ul>
     </section>
   </main>
   <footer>
@@ -44,6 +60,7 @@
   </footer>
   <script src="notescript.js"></script>
   <script src="checklistscript.js"></script>
+  <script src="folderscript.js"></script>
 
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

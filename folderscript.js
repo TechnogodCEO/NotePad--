@@ -29,6 +29,8 @@ const createFolder = (text) => {
   folderButton.className = "folderButton button";
   folderNotelist.className = "folderNotes";
   folderButton.innerHTML = text;
+  folder.value = text;
+  folderNotelist.id = text;
   folder.appendChild(folderButton);
   folder.appendChild(folderNotelist);
 
@@ -80,3 +82,7 @@ const folderScriptMain = () => {
 }
 
 folderScriptMain();
+
+module.exports = {
+  createFolder
+}

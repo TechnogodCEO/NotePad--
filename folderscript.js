@@ -50,7 +50,7 @@ folderform.onsubmit = (event) => {
   let inputField = document.getElementById("activeFolder");
   for (const folder of JSON.parse(localStorage['folders'])){
     if (folder.name == inputField.value.trim()){
-      alert("You cannot have folders with the same name")
+      alert("You cannot have folders with the same name");
       return false; 
     }
   }

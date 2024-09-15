@@ -13,7 +13,7 @@ this is a basic notetaking software with basic note and checklist functionality
 
 ## past versions and changes 
 
-  ### v1.0.1
+  #### v1.0.1
 
   1. Saving of checklist status 
   
